@@ -1,0 +1,22 @@
+li {
+    line-height: 6vh;
+}
+  
+li:nth-child(even){
+    background:rgb(230, 230, 230);
+}
+
+li:hover {
+    background: rgb(189, 180, 180)
+}
+
+#check-todo {
+    margin-right: 2vh;
+}
+
+#delete-todo {
+    margin-left: 2vh;
+    float: right;
+    margin-right: 2vh;
+    margin-top: 1vh;
+}
