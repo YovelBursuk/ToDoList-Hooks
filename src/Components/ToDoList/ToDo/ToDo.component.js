@@ -4,20 +4,21 @@ import "./ToDo.css";
 import Check from "../../../Icons/tick-mark.svg";
 import Delete from "../../../Icons/delete.svg";
 
-const ToDo = ({ todo, key }) => {
+const ToDo = ({ todo, index, onCheck, onDelete }) => {
+    console.log(index);
     return (
-        <li key={key} id="list-item">
+        <li key={index} id="list-item">
             <img src={Check} 
                  id="check-image" 
                  alt="Check" 
-                 onClick={() => alert("check-to-do")}>
+                 onClick={() => onCheck(index)}>
 
             </img>
-            {todo.title}
+            <span className={todo.isFinished ? "finished-todo" : ""}>{todo.title}</span>
             <img src={Delete} 
                  id="delete-image" 
                  alt="Delete"
-                 onClick={() => alert("delete-to-do")}>
+                 onClick={() => onDelete(index)}>
 
             </img>
         </li>

@@ -25,3 +25,7 @@ li:hover {
     margin-right: 2vh;
     margin-top: 1vh;
 }
+
+.finished-todo {
+    text-decoration: line-through;
+}

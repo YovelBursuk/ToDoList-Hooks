@@ -4,7 +4,19 @@ import './App.css';
 import { setInitialToDos } from '../Utils/Utils';
 
 const App = () => {
-  const [toDos] = useState(setInitialToDos());
+  const [toDos, setToDos] = useState(setInitialToDos());
+
+  const checkToDo = (index) => {
+    let newToDos = [...toDos];
+    newToDos[index].isFinished = !newToDos[index].isFinished;
+    setToDos(newToDos);
+  }
+
+  const deleteToDo = (index) => {
+    let newToDos = [...toDos];
+    newToDos.splice(index, 1);
+    setToDos(newToDos);
+  }
 
   return (
     <div is="App">
@@ -13,7 +25,7 @@ const App = () => {
         <div id="app-body">
           <p>Your ToDos:</p>
           <div id="todos-list">
-            <ToDoList toDos={toDos}></ToDoList>
+            <ToDoList toDos={toDos} onTodoCheck={checkToDo} onTodoDelete={deleteToDo}></ToDoList>
           </div>
         </div>
       </div>
