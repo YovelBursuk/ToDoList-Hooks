@@ -10,11 +10,16 @@ li:hover {
     background: rgb(189, 180, 180)
 }
 
-#check-todo {
+#check-image {
+    max-width: 4vh;
+    max-height: 4vh;
     margin-right: 2vh;
+    margin-top: 1vh;
 }
 
-#delete-todo {
+#delete-image {
+    max-width: 4vh;
+    max-height: 4vh;
     margin-left: 2vh;
     float: right;
     margin-right: 2vh;
