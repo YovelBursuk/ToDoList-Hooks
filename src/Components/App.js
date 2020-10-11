@@ -19,6 +19,16 @@ const App = () => {
     setToDos(newToDos);
   }
 
+  const addNewTodo = () => {
+    setToDos([ {title: null, isFinished: false}, ...toDos]);
+  }
+
+  const setToDoValue = (index, newValue) => {
+    let newToDos = [...toDos];
+    newToDos[index].title = newValue;
+    setToDos(newToDos);
+  }
+
   return (
     <div is="App">
       <div id="app-wrapper">
@@ -26,13 +36,16 @@ const App = () => {
         <div id="app-body">
           <p>Your ToDos:</p>
           <div id="todos-list">
-            <ToDoList toDos={toDos} onTodoCheck={checkToDo} onTodoDelete={deleteToDo}></ToDoList>
+            <ToDoList toDos={toDos} 
+                      onTodoCheck={checkToDo} 
+                      onTodoDelete={deleteToDo}
+                      onSetNewValue={setToDoValue}
+            ></ToDoList>
           </div>
-          <button id="add-new-todo">
+          <button id="add-new-todo" onClick={() => addNewTodo()}>
             <img src={PlusIcon} 
                  id="plus-image" 
-                 alt="Add new" 
-                 onClick={() => {}}>
+                 alt="Add new">
 
             </img>
             Add new ToDo!

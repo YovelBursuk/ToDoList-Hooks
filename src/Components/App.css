@@ -47,11 +47,14 @@ header {
     border: none;
     border-radius: 2vh;
     align-items: center;
+    color: #e0efe5;
+    outline: none;
+    box-shadow: none;
 }
 
 #plus-image {
-    max-width: 3vh;
-    max-height: 3vh;
+    max-width: 2vh;
+    max-height: 2vh;
     margin-left: 1vh;
     margin-right: 1vh;
 }

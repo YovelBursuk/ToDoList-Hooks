@@ -29,3 +29,16 @@ li:hover {
 .finished-todo {
     text-decoration: line-through;
 }
+
+#todo-input {
+    display: inline-flex;
+    width: 70%;
+}
+
+#todo-text-input {
+    width: 100%;
+}
+
+#todo-input-save {
+    margin-left: 2vh;
+}

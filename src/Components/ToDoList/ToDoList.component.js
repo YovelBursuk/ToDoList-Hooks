@@ -3,7 +3,7 @@ import ToDo from "./ToDo/ToDo.component";
 
 import "./ToDoList.css";
 
-const ToDoList = ({toDos = [], onTodoCheck, onTodoDelete}) => {
+const ToDoList = ({toDos = [], onTodoCheck, onTodoDelete, onSetNewValue}) => {
     return (
         <ul id="todo-list">
             {
@@ -11,7 +11,8 @@ const ToDoList = ({toDos = [], onTodoCheck, onTodoDelete}) => {
                                                  index={index} 
                                                  onCheck={onTodoCheck}
                                                  onDelete={onTodoDelete}
-                                                 todo={todo}>
+                                                 todo={todo}
+                                                 onSetTodoValue={onSetNewValue}>
 
                                             </ToDo>)
             }
