@@ -36,3 +36,22 @@ header {
     justify-content: center;
     min-height: 60vh;
 }
+
+#add-new-todo {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    margin-top: 2vh;
+    width: 11%;
+    background-color: #53b7d6;
+    border: none;
+    border-radius: 2vh;
+    align-items: center;
+}
+
+#plus-image {
+    max-width: 3vh;
+    max-height: 3vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}

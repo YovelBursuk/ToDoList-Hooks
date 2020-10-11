@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ToDoList from './ToDoList/ToDoList.component';
 import './App.css';
 import { setInitialToDos } from '../Utils/Utils';
+import PlusIcon from "../Icons/plus.svg";
 
 const App = () => {
   const [toDos, setToDos] = useState(setInitialToDos());
@@ -27,6 +28,15 @@ const App = () => {
           <div id="todos-list">
             <ToDoList toDos={toDos} onTodoCheck={checkToDo} onTodoDelete={deleteToDo}></ToDoList>
           </div>
+          <button id="add-new-todo">
+            <img src={PlusIcon} 
+                 id="plus-image" 
+                 alt="Add new" 
+                 onClick={() => {}}>
+
+            </img>
+            Add new ToDo!
+          </button>
         </div>
       </div>
 

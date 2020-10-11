@@ -2,7 +2,7 @@
 export const setInitialToDos = () => {
     return [
         {
-            title: "Print hello world using react hooksaaaaaaaaaaaaaaaaaaaaaaaa",
+            title: "Print hello world using react hooks",
             isFinished: true
         },
         {
