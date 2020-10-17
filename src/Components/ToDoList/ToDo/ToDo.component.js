@@ -3,6 +3,7 @@ import React, {useState} from "react"
 import "./ToDo.css";
 import Check from "../../../Icons/tick-mark.svg";
 import Delete from "../../../Icons/delete.svg";
+import Edit from "../../../Icons/edit.svg";
 
 const ToDo = ({ todo, index, onCheck, onDelete, onSetTodoValue }) => {
     const [inputValue, setInputValue] = useState("");
@@ -31,12 +32,21 @@ const ToDo = ({ todo, index, onCheck, onDelete, onSetTodoValue }) => {
                 </div>
             }
             
-            <img src={Delete} 
-                 id="delete-image" 
-                 alt="Delete"
-                 onClick={() => onDelete(index)}>
+            <div id="image-container">
+                <img src={Edit} 
+                    id="edit-image" 
+                    alt="Edit"
+                    onClick={() => onSetTodoValue(index, undefined)}>
 
-            </img>
+                </img>
+                
+                <img src={Delete} 
+                    id="delete-image" 
+                    alt="Delete"
+                    onClick={() => onDelete(index)}>
+
+                </img>
+            </div>
         </li>
     )
 }

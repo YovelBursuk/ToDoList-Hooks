@@ -21,9 +21,19 @@ li:hover {
     max-width: 4vh;
     max-height: 4vh;
     margin-left: 2vh;
-    float: right;
     margin-right: 2vh;
     margin-top: 1vh;
+}
+
+#edit-image {
+    max-width: 4vh;
+    max-height: 4vh;
+    margin-top: 1vh;
+}
+
+#image-container {
+    display: flex;
+    float: right;
 }
 
 .finished-todo {
