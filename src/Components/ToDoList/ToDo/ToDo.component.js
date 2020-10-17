@@ -36,7 +36,7 @@ const ToDo = ({ todo, index, onCheck, onDelete, onSetTodoValue }) => {
                 <img src={Edit} 
                     id="edit-image" 
                     alt="Edit"
-                    onClick={() => onSetTodoValue(index, undefined)}>
+                    onClick={() => onSetTodoValue(index, null)}>
 
                 </img>
                 
